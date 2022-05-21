@@ -2,6 +2,7 @@ package com.forher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +16,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    sleep(1000);
+                    sleep(3500);
+
+                    Intent i = new Intent(MainActivity.this, Login.class);
+                    startActivity(i);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -24,6 +28,5 @@ public class MainActivity extends AppCompatActivity {
         };
 
         thread.start();
-
     }
 }
