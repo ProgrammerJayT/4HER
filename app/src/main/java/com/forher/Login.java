@@ -49,6 +49,7 @@ public class Login extends AppCompatActivity {
                 credentials.setContext(getApplicationContext());
 
                 startActivity(new Intent(Login.this, LoginVerification.class));
+                finish();
             }
         });
 
