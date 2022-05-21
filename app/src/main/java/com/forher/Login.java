@@ -20,11 +20,9 @@ import java.util.Objects;
 public class Login extends AppCompatActivity {
 
     TextView register, login, reset, greetings;
-    FirebaseDatabase database;
-    DatabaseReference testRef;
     TextInputEditText email, password;
 
-    LoginCredentials credentials;
+    LoginCredentials credentials = new LoginCredentials();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +36,6 @@ public class Login extends AppCompatActivity {
         email = findViewById(R.id.login_email);
         password = findViewById(R.id.login_password);
 
-        database = FirebaseDatabase.getInstance();
-        testRef = database.getReference("test");
-
-        testRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String val = snapshot.getValue(String.class);
-                if (!val.isEmpty()){
-                    greetings.setText(val);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
         login.setOnClickListener(view -> {
             String getEmail = Objects.requireNonNull(email.getText()).toString().trim();
             String getPassword = Objects.requireNonNull(password.getText()).toString().trim();
@@ -64,7 +44,11 @@ public class Login extends AppCompatActivity {
                 Toast.makeText(this, "All fields are mandatory", Toast.LENGTH_SHORT).show();
             }
             else {
+                credentials.setEmail(getEmail);
+                credentials.setPassword(getPassword);
+                credentials.setContext(getApplicationContext());
 
+                startActivity(new Intent(Login.this, LoginVerification.class));
             }
         });
 
