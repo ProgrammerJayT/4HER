@@ -4,16 +4,19 @@ import android.content.Context;
 
 public class LoginCredentials {
 
-    private String email;
-    private String password;
+    private static String email;
+    private static String password;
     private Context context;
+
+    public LoginCredentials() {
+    }
 
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        LoginCredentials.email = email;
     }
 
     public String getPassword() {
@@ -21,7 +24,7 @@ public class LoginCredentials {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        LoginCredentials.password = password;
     }
 
     public Context getContext() {
@@ -33,8 +36,8 @@ public class LoginCredentials {
     }
 
     public LoginCredentials(String email, String password, Context context) {
-        this.email = email;
-        this.password = password;
+        LoginCredentials.email = email;
+        LoginCredentials.password = password;
         this.context = context;
     }
 }
