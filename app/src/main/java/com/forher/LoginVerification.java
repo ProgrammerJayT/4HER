@@ -35,7 +35,7 @@ public class LoginVerification extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()){
                 Toast.makeText(this, "Welcome back", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginVerification.this, Home.class));
+                startActivity(new Intent(LoginVerification.this, Landing.class));
             }
             else {
                 Toast.makeText(this, "Couldn't verify credentials", Toast.LENGTH_SHORT).show();
