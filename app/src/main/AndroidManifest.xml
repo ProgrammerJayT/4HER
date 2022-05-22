@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.4HER" >
         <activity
-            android:name=".Home"
+            android:name=".Landing"
             android:exported="false" />
         <activity
             android:name=".LoginVerification"
