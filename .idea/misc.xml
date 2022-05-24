@@ -10,9 +10,14 @@
         <entry key="..\:/In10sive Holdings (Pty) Ltd/4HER/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="app/src/main/res/drawable/red_buttons.xml" value="0.194" />
         <entry key="app/src/main/res/layout/activity_landing_page.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_login_verification.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.19635416666666666" />
+        <entry key="app/src/main/res/layout/activity_registration_verification.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_contacts.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/tip_item.xml" value="0.19635416666666666" />
       </map>
     </option>
   </component>

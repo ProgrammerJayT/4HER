@@ -51,4 +51,7 @@ dependencies {
 
     //Fragment container
     implementation 'androidx.navigation:navigation-fragment:2.4.2'
+
+    //Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
